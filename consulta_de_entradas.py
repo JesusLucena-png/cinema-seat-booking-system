@@ -8,23 +8,18 @@ from visualizacion_sala import title
 
 
 def show_history(history):
-    # Print top separator line
-    print("\033[1;34m" + "-"*113 + "\033[0m")
     
     # Display section title
     title("PURCHASE HISTORY")
-    
-    # Print another separator line
-    print("\033[1;34m" + "-"*113 + "\033[0m")
 
     # Iterate through purchase history and display each record
-    for i, (fecha, user_id, nombre, asientos) in enumerate(history, 1):
+    for i, (date, user_id, name, seats) in enumerate(history, 1):
         print(f'''
 Purchase: {i}
-Date: {fecha}
-Name: {nombre}
+Date: {date}
+Name: {name}
 User ID: {user_id}
-Seats: {asientos}
+Seats: {seats}
         ''')
         # Print bottom separator line
         print("\033[1;34m" + "-"*113 + "\033[0m")

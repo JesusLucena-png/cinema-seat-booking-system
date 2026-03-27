@@ -8,7 +8,7 @@ from visualizacion_sala import title
 from compra_de_entradas import validate_not_empty, validate_user
 
 
-def register_customer(clientes):
+def register_customer(customers):
     # Display section title
     title("Client Registration")
 
@@ -48,13 +48,13 @@ def register_customer(clientes):
         break
     
     # Create customer as a dictionary
-    cliente = {
+    customer  = {
         "id": id_customer,
         "nombre": name
     }
     
     # Add the new customer to the list
-    clientes.append(cliente)
+    customers.append(customer)
 
     # Show success message
     print("\n\033[1;32m" + "-"*113 + "\n" +
@@ -62,25 +62,25 @@ def register_customer(clientes):
     "\n" + "-"*113 + "\033[0m")
 
 
-def show_customers(clientes):
+def show_customers(customers):
     # Display section title
     title("Client List")
     
     # Check if there are no clients in the system
-    if len(clientes) == 0:
+    if len(customers) == 0:
         print("\n\033[1;31m" + "-"*113 + "\n" +
                 f"{'THERE ARE NO USERS IN THE SYSTEM':^113}" +
                 "\n" + "-"*113 + "\033[0m")
         return
     
     # Iterate through clients and display their data
-    for c in clientes:
+    for c in customers:
         print(f"ID: {c['id']} - Name: {c['nombre']}")
         print("\033[1;34m" + "-"*113 + "\033[0m")
     
 
 # Initial list of clients (example data)
-clientes = [
+customers  = [
     {'id': '123456', 'nombre': 'Jesus Lucena'},
     {'id': '112233', 'nombre': 'Andres Quintero'}
 ]

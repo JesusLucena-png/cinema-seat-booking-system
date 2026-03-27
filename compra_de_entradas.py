@@ -40,7 +40,7 @@ def validate_not_empty(field_value, field_name):
 
 # Validate user by ID
 def validate_user(user_id):
-    for client in clients.clientes:
+    for client in clients.customers:
         if client.get("id") == user_id:
             return client
     return None
@@ -70,7 +70,7 @@ def execute_purchase():
         max_interval = 0
         position = None
 
-        if clients.clientes == []:
+        if clients.customers == []:
             print("\n\033[1;31m" + "-"*113 + "\n" +
                 f"{'THERE ARE NO USERS IN THE SYSTEM':^113}" +
                 "\n" + "-"*113 + "\033[0m")

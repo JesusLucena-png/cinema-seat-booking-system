@@ -21,14 +21,14 @@ def main():
 
         # Display menu options to the user
         print("""
-\033[1;34m 1. \033[0mRegistrar cliente
-\033[1;34m 2. \033[0mMostrar clientes
-\033[1;34m 3. \033[0mVisualizacion de la sala
-\033[1;34m 4. \033[0mCompra de entradas
-\033[1;34m 5. \033[0mConsulta de Entradas Vendidas
-\033[1;34m 6. \033[0mReporte de ocupacion de sala
+\033[1;34m 1. \033[0mRegister Customer
+\033[1;34m 2. \033[0mShow Customers
+\033[1;34m 3. \033[0mView Cinema Room
+\033[1;34m 4. \033[0mBuy Tickets
+\033[1;34m 5. \033[0mView Sales History
+\033[1;34m 6. \033[0mRoom Occupancy Report
               
-\033[1;31m 7. \033[0mSalir
+\033[1;31m 7. \033[0mExit
 """)
 
         # Print separator line
@@ -44,11 +44,11 @@ def main():
         
         # Option 1: Register a new client
         if option == "1":
-            clients.register_customer(clients.clientes)
+            clients.register_customer(clients.customers)
 
         # Option 2: Show all registered clients
         elif option == "2":
-            clients.show_customers(clients.clientes)
+            clients.show_customers(clients.customers)
 
         # Option 3: Display cinema room visualization
         elif option == "3":

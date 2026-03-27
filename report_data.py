@@ -4,7 +4,7 @@
 # ==========================================
 
 # Import required modules
-import compra_de_entradas as compra
+import compra_de_entradas as purchase
 from visualizacion_sala import title
 
 
@@ -32,15 +32,9 @@ def report(cinema_room):
          percent = (occupied / total) * 100
     else:
         percent = 0
-
-    # Print top separator line
-    print("\033[1;34m" + "-"*113 + "\033[0m")
     
     # Display report title
     title("ROOM OCCUPANCY REPORT")
-    
-    # Print another separator line
-    print("\033[1;34m" + "-"*113 + "\033[0m")
 
     # Display seat statistics
     print(f"Total seats: {total}")
@@ -49,13 +43,13 @@ def report(cinema_room):
     print(f"Percent occupied: {percent:.2f}%")
 
     # Show customers who have purchased tickets
-    if compra.purchase_history:
+    if purchase.purchase_history:
         title("Customers who bought tickets:")
 
         # Iterate through purchase history and display client data
-        for data_client in compra.purchase_history:
+        for data_client in purchase.purchase_history:
             print(f"Name: {data_client[2]:^50} | ID: {data_client[1]:^50}")
-            print("\n\033[1;34m" + "-"*113 + "\033[0m")   
+            print("\033[1;34m" + "-"*113 + "\033[0m")   
 
     else:
         # Message when there are no purchases yet
